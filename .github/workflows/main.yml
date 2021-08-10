@@ -19,6 +19,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     - name: Run build script
-       run: ./.github/scripts/deploy.sh
-       shell: bash
+     - run: cd /home/ubuntu/actions-runner/hello-world-node
+     - run: git pull origin
+     - run: npm install
+     - run: pm2 restart index.js
+
