@@ -19,7 +19,5 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     - run: cd /home/ubuntu/hello-world-node/ && git pull origin
-     - run:  cd /home/ubuntu/hello-world-node/ && npm install
-     - run: cd /home/ubuntu/hello-world-node/ && pm2 restart index.js
+     - run: cd /home/ubuntu/hello-world-node/ && git pull origin && npm install && pm2 restart index.js
 
